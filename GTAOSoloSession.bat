@@ -209,7 +209,7 @@ GOTO LABEL-%ERRORLEVEL%
 		echo !id! >> Whitelist.txt
 		echo Whitelist created!
 		goto WLFILTER
-		pause
+		
 	)
 	goto menu
 	
@@ -417,11 +417,6 @@ if "!newIp!"=="0" (
 	set newIp=!temp!-!ipm!,!pip1!.!pip2!.!pip3!.!pip4!
 )
 
-set s=!s:111 =!
-call set New=%%s:!ips! =%%
-set s=!New!
-set t=!New!
-if defined s goto loopGetFS
 set temp=!newIp!
 set newIp=!temp!-255.255.255.255
 
